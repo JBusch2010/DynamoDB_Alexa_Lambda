@@ -16,7 +16,7 @@ import java.util.List;
         private String type;
         private String difficulty;
         private String correct_answer;
-        private List<Incorrect_Answers> incorrect_answers = new ArrayList<>();
+//        private List<Incorrect_Answers> incorrect_answers = new ArrayList<>();
 
 
     public Trivia() {}
@@ -70,9 +70,9 @@ import java.util.List;
         this.question = question;
     }
 
-    @DynamoDBAttribute
-    public List<Incorrect_Answers> getIncorrect_Answers() { return incorrect_answers; }
-    public void setIncorrect_answers(List<Incorrect_Answers> incorrect_answers) { this.incorrect_answers = incorrect_answers; }
-    public void addIncorrect_answers(Incorrect_Answers incorrect_answers) { this.incorrect_answers.add(incorrect_answers); }
+//    @DynamoDBAttribute
+//    public List<Incorrect_Answers> getIncorrect_Answers() { return incorrect_answers; }
+//    public void setIncorrect_answers(List<Incorrect_Answers> incorrect_answers) { this.incorrect_answers = incorrect_answers; }
+//    public void addIncorrect_answers(Incorrect_Answers incorrect_answers) { this.incorrect_answers.add(incorrect_answers); }
 
 }

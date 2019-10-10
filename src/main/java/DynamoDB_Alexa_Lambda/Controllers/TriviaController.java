@@ -1,6 +1,6 @@
 package DynamoDB_Alexa_Lambda.Controllers;
 
-import DynamoDB_Alexa_Lambda.Models.Incorrect_Answers;
+//import DynamoDB_Alexa_Lambda.Models.Incorrect_Answers;
 import DynamoDB_Alexa_Lambda.Models.Trivia;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
@@ -21,10 +21,10 @@ public class TriviaController {
             final AmazonDynamoDB ddb = AmazonDynamoDBClientBuilder.defaultClient();
             DynamoDBMapper ddbMapper = new DynamoDBMapper(ddb);
 
-            Incorrect_Answers incorrect_answers = new Incorrect_Answers();
-
+//            Incorrect_Answers incorrect_answers = new Incorrect_Answers();
+            trivia[i].setCategory(trivia[i].getCategory().toLowerCase());
             ddbMapper.save(trivia[i]);
-            ddbMapper.save(incorrect_answers);
+//            ddbMapper.save(incorrect_answers);
         }
         return trivia[0];
     }
